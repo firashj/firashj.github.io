@@ -1,0 +1,24 @@
+<app-header></app-header>
+<app-home></app-home>
+
+{{ title }}
+
+<div *ngFor="let item of titles">
+  {{ item }}
+</div>
+
+<hr>
+<ng-container *ngFor="let item of persons">
+
+  <ng-container>
+    <div>{{ item.name }} | {{ item.age }}</div>
+  </ng-container>
+
+</ng-container>
+
+<button (click)="addUser()" class="btn btn-success">
+  Add me
+</button>
+<button (click)="removeUser()" class="btn btn-danger">
+  Remove first
+</button>
