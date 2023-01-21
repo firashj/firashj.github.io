@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [];
 
@@ -16,7 +16,7 @@ const routes: Routes = [];
     HeaderComponent,
     ProfileComponent,
   ],
-  imports: [BrowserModule,RouterModule.forRoot(routes)],
+  imports: [FormsModule ,BrowserModule,RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
 })

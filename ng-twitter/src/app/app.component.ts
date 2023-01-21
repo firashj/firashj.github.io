@@ -33,18 +33,22 @@ export class AppComponent {
     },
   ];
 
+  newPerson = {
+    name: '',
+    age: 0,
+  };
+
   addUser() {
-    const obj =
-      {
-        name:'hedi',
-        age:99,
-      }
-    this.persons.push(obj)
-    console.log('test test');
+    const obj = {
+      name: this.newPerson.name,
+      age: this.newPerson.age,
+    };
+    // const obj = { ...this.newPerson };
+    this.persons.push(obj);
+    console.log(this.persons);
+
   }
-  removeUser(){
-    this.persons.shift()
-
+  removeUser() {
+    this.persons.shift();
+  }
 }
-}
-

@@ -1,24 +1,30 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <app-home></app-home>
 
-{{ title }}
+<!-- {{ title }}
 
 <div *ngFor="let item of titles">
   {{ item }}
 </div>
 
-<hr>
+<hr />
 <ng-container *ngFor="let item of persons">
-
-  <ng-container>
+  <ng-container *ngIf="item.age >= 10">
     <div>{{ item.name }} | {{ item.age }}</div>
   </ng-container>
-
 </ng-container>
+<div class="row">
+  <div class="col-4">
+    <input placeholder="name" [(ngModel)]="newPerson.name" type="text" class="form-control" />
 
+  </div>
+  <div class="col-4">
+    <input placeholder="age" [(ngModel)]="newPerson.age" type="number" class="form-control" />
+  </div>
+</div>
 <button (click)="addUser()" class="btn btn-success">
   Add me
 </button>
 <button (click)="removeUser()" class="btn btn-danger">
   Remove first
-</button>
+</button> -->
