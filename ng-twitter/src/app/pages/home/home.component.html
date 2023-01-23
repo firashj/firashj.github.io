@@ -1,16 +1,46 @@
-<h1>welcome {{ name }} to myportfolio from {{ location }}</h1>
-<h2>this status in : {{ getStatus() }}</h2>
-
-<button class="btn btn-danger" (click)="messages()">save</button>
-
 <div class="row">
   <div class="col-md-4 offset-md-4">
     <div class="card">
       <div class="card-header"><h4 class="text-center">name</h4></div>
       <div class="card-body">
-        <input type="text" class="form-control" [(ngModel)]="name" /> <b class="text-danger">{{name}}</b>
-
+        <input type="text" class="form-control" [(ngModel)]="name" />
+        <b class="text-danger">{{ name }}</b>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+  <button class="btn btn-link d-f" (click)="goToProfile()">
+    go to profile
+  </button>
+</div>
+
+<div>
+  <table class="table">
+    <tr>
+      <th><i class="fa fa-user fa-lg" aria-hidden="true"></i> name</th>
+      <th>age</th>
+      <th><i class="fa fa-globe" aria-hidden="true"></i> country</th>
+      <th>icone</th>
+    </tr>
+    <tr *ngFor="let item of Datalist">
+      <td>
+        <strong>
+          <i class="fa fa-user" aria-hidden="true"></i> {{ item.name }}</strong
+        >
+      </td>
+      <td>{{ item.age }}</td>
+      <td><i class="fa fa-globe" aria-hidden="true"></i>{{ item.country }}</td>
+      <td><i class="fa fa-car" style="font-size: 18px"></i></td>
+    </tr>
+  </table>
+</div>
+
+<div class="row">
+  <div [ngSwitch]="nation">
+    <div *ngSwitchCase="'america'">welcome america</div>
+    <div *ngSwitchCase="'brazil'">welcome brazil</div>
+    <div *ngSwitchCase="'russia'">welcome russia</div>
   </div>
 </div>

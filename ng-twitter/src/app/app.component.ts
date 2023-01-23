@@ -46,7 +46,6 @@ export class AppComponent {
     // const obj = { ...this.newPerson };
     this.persons.push(obj);
     console.log(this.persons);
-
   }
   removeUser() {
     this.persons.shift();
