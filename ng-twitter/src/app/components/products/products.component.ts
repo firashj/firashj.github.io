@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.scss'],
+  selector: 'app-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.scss'],
 })
-export class TestComponent implements OnInit {
+export class ProductsComponent implements OnInit {
   table: any = [];
   constructor(private productService: ProductService) {}
 
@@ -16,14 +16,6 @@ export class TestComponent implements OnInit {
 
   getProduct() {
     this.table = this.productService.productTable;
-  }
-  tunisia = true;
-  algeria = false;
-  brazil = false;
-
-  changeCountry() {
-    this.tunisia = false;
-    this.algeria = true;
-    this.brazil = false;
+    console.log('my product', this.table);
   }
 }

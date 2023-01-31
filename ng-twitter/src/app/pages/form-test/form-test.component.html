@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Contact</h1>
+  <form [formGroup]="form" autocomplete="off">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        formControlName="email"
+        id="email"
+        class="form-control"
+        name="email"
+        required
+        minlength="5"
+        pattern="Laevitas"
+      />
+
+      <div *ngIf="f['email'] && f['email'].errors">
+        <div *ngIf="f['email'].errors['required']">Email is required</div>
+        <div *ngIf="f['email'].errors['email']">Email is not valid</div>
+        <div *ngIf="f['email'].errors['maxlength']">Email is not length</div>
+        <div *ngIf="f['email'].errors['minlength']">Minimum 5 characters</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" class="form-control" />
+    </div>
+    <button class="btn btn-success">Send</button>
+  </form>
+</div>

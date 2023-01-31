@@ -1,0 +1,39 @@
+<!-- <div class="container">
+  {{ firstName | lowercase }} <br />
+  {{ firstName | uppercase }} <br />
+  {{ title | titlecase }}<br />
+  {{ title | slice : 8 | titlecase }}<br />
+  {{ title | slice : 8 : 15 | titlecase }}<br />
+  {{ student | json }}<br />
+  {{ myDate | date : "shortDate" }}<br />
+  {{ 17.56 | number : "3.4-5" }}<br />
+  {{ 0.75 | percent }}<br />
+  {{ 100 | currency : "EUR" : "code" }}<br />
+</div> -->
+
+<div class="container">
+  <h1>JSON Placeholher Data</h1>
+  <table class="table table-striped table-hover table-sm">
+    <thead class="thead-dark">
+      <th>#</th>
+      <th>username</th>
+      <th>Full name</th>
+      <th>Email</th>
+      <th>Adress</th>
+      <th>City</th>
+      <th>Zipcode</th>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address.street }}</td>
+        <td>{{ user.address.zipcode }}</td>
+        <td>{{ user.address.city }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
